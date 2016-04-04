@@ -1,0 +1,15 @@
+.label {
+    display: inline-block;
+}
+
+.normal {
+    background-color: greenyellow;
+}
+
+.fire {
+    background-color: indianred;
+}
+
+.water {
+    background-color: aqua;
+}

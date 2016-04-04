@@ -1,0 +1,20 @@
+<!Doctype html>
+<html ng-app="pokemonApp">
+<head>
+    <meta charset="utf-8">
+    <title>Pokemons</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="app/styles/style.css" rel="stylesheet">
+</head>
+<body>    
+    <ng-view></ng-view>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-resource.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/scripts/directives/nav.js"></script>
+    <script src="app/scripts/controllers/mainController.js"></script>
+    <script src="app/scripts/services/pokeService.js"></script>
+</body>
+</html>

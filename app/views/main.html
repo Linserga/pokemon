@@ -1,0 +1,48 @@
+<div class="container">
+    <navigation></navigation>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                <div class="col-xs-6 col-md-4" ng-repeat="pokemon in data.objects | filter:typeSort">
+                    <div ng-click="showPokemon(pokemon.national_id)">
+                        <img src="http://pokeapi.co/media/img/{{pokemon.national_id}}.png" alt="Pokemon Image">
+                        {{ pokemon.name }}
+                        <div ng-repeat="type in pokemon.types">
+                            <span class="label label-default {{type.name}}" >{{type.name}}</span> 
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="loadMore()">Load More</button>
+        </div>
+        <div class="col-xs-6 col-md-4" ng-show="pokeShow">
+            <div>
+                <img src="http://pokeapi.co/media/img/{{poke.national_id}}.png" alt="Pokemon Image">
+                <h3>{{ poke.name }}</h3>
+                <table class="table table-striped">
+                    <tr>
+                        <td>Attack</td>
+                        <td>{{poke.attack}}</td>
+                    </tr>
+                    <tr>
+                        <td>Defence</td>
+                        <td>{{poke.defence}}</td>
+                    </tr>
+                    <tr>
+                        <td>HP</td>
+                        <td>{{poke.hp}}</td>
+                    </tr>
+                    <tr>
+                        <td>Weigth</td>
+                        <td>{{poke.weigth}}</td>
+                    </tr>
+                    <tr>
+                        <td>Speed</td>
+                        <td>{{poke.speed}}</td>
+                    </tr>
+                </table>                
+            </div>
+        </div>        
+    </div>    
+</div>
